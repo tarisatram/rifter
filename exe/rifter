@@ -1,6 +1,15 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'rifter'
+require 'thor'
 
-Rifter.start
+# The rifter CLI
+class CLI < Thor
+  desc 'launch [discord_token] [discord_client_id]', 'Launch rifter'
+  def launch(token, id)
+    require 'rifter'
+    Rifter.launch(token, id)
+  end
+end
+
+CLI.start(ARGV)

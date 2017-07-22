@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'discordrb', '~> 3.2'
   spec.add_dependency 'esi-ruby', '~> 1.0'
+  spec.add_dependency 'thor', '~> 0.19'
 end
